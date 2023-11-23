@@ -11,12 +11,16 @@ namespace DemoCRAD.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Student
     {
         public int StudentNo { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Branch { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
     }
 }
