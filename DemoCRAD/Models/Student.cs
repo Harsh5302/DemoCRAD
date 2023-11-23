@@ -16,9 +16,9 @@ namespace DemoCRAD.Models
     public partial class Student
     {
         public int StudentNo { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Name Required!")]
         public string Name { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Branch Required!")]
         public string Branch { get; set; }
         [EmailAddress]
         public string Email { get; set; }
